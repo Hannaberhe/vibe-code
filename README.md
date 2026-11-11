@@ -4,7 +4,45 @@
 
 **Code:** [github.com/Hannaberhe/vibe-code](https://github.com/Hannaberhe/vibe-code)
 
-See how much work time a purchase costs. Get a short, funny joke about it. Build good coding habits while you work toward your goals.
+**Wallet Check turns prices into work time. It uses friendly humor and daily coding tasks to help young people think about money, time, and personal goals.**
+
+## Project Description
+
+Wallet Check is a web app for students, young workers, and people learning to code. It brings together three everyday questions: How much work does this purchase cost? How many days of pay would cover the meal I want? What small step can I take toward my coding goals today?
+
+The app starts with a simple purchase calculator. You enter an item, its price, and your pay per hour. Wallet Check turns that price into work hours and 8-hour workdays. It shows the answer on a receipt-style card, so the cost is easy to understand. A pair of headphones priced at 2,000 birr becomes **20 hours of work** for someone earning 100 birr per hour.
+
+The food planner uses the same idea with daily pay. You enter a meal and its price, then enter how much you earn each day. The app shows how many full workdays of pay would cover it. For example, a 650 birr meal at 300 birr per day needs about 2.17 days of pay, rounded up to **3 full workdays**. This assumes all daily pay goes toward the meal. It does not include other living costs.
+
+After each calculation, the app adds a short roast: a playful joke about the purchase. Shopping jokes change based on how much work the item costs. Food jokes keep the mood light while you plan the meal. The words are simple, so people who do not speak English as their first language can enjoy them too. The jokes focus on choices and habits, rather than a person's value or family duties.
+
+The coding section connects your current purchase or meal to a daily practice routine. Your goal stays visible while you work on three tasks: save a useful code change, solve a coding problem, and code for 25 focused minutes. You tick the tasks yourself and collect practice points called XP. Completing all three gives 75 XP and unlocks a 15-minute game-break timer. These points show effort; they do not become money or reduce the price of your goal.
+
+You can add your name, choose what you are learning, and select a gentle, medium, or strong coding roast. Parents and caregivers always receive kind feedback. A free rest-day pass protects the daily streak when real responsibilities need attention. This makes room for both steady practice and real life.
+
+The app works without sign-up. Calculations run in the browser, and coding progress is saved on the same device. It uses local joke templates, so the live demo does not need an AI key or a paid AI service. The interface includes example purchases, local food examples, animations, a moving buy button, and clear error messages. It works on phones and computers.
+
+### How the three parts connect
+
+| Part | What you enter or do | What you get |
+| --- | --- | --- |
+| Purchase check | Enter an item, price, and hourly pay. | The work time behind the price, plus a funny message. |
+| Food plan | Enter a meal, price, and daily pay. | The full workdays of pay needed to cover the meal. |
+| Coding habits | Keep your goal visible and tick completed tasks. | Practice points, a daily streak, coach feedback, and a game break. |
+
+### Who can use it?
+
+- **Students** who want to understand the time behind everyday spending.
+- **Young workers** who want a quick way to think about purchases and meals.
+- **New developers** who want a simple daily coding routine.
+- **Busy parents and caregivers** who need flexible goals and supportive feedback.
+- **Hackathon visitors** who want to try a working, funny demo without creating an account.
+
+### A simple example
+
+A user wants a new phone. They enter the price and their hourly pay, then see how many workdays it would take to pay for it. A joke makes the result memorable. They can decide to save their money, check a smaller purchase, or switch to planning a meal. Their current goal also appears in the coding section, where they can finish small tasks and track their practice.
+
+The main goal is to make the link between time and money clear, while making daily progress feel encouraging and fun.
 
 ## Team Members
 
@@ -15,9 +53,13 @@ See how much work time a purchase costs. Get a short, funny joke about it. Build
 
 ## Why we built it
 
-A price is easy to see. The time needed to earn that money is easy to forget.
+A price is easy to see. The time needed to earn that money is easy to forget. A number such as 2,000 birr may feel different when it is shown as 20 hours of work.
 
-Wallet Check makes that time clear. It helps young people think about purchases and plan meals. It also gives them simple daily coding tasks. Friendly jokes make it fun to use.
+We wanted to make that connection easy to understand. The app gives users a clear estimate before they decide what to buy or how to plan a meal. It does not make the decision for them.
+
+Our team also wanted to connect personal goals with daily learning. A visible goal can remind someone why they want to keep practicing. Small coding tasks give them a clear place to start, while points and breaks make progress easy to notice.
+
+Humor helps keep the experience friendly. Short jokes and playful interactions make the calculations more memorable. Free rest days and kind caregiver feedback keep the app flexible when life gets busy.
 
 ## How to use it
 
