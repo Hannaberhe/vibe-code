@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f4ea" />
+    <meta name="description" content="That purchase costs more than money. Find out how many work hours it takes, get roasted, and give your wallet a fighting chance." />
+    <meta property="og:title" content="Wallet Check — Can I afford this?" />
+    <meta property="og:description" content="A brutally honest shopping calculator. We do the math. Your wallet does the judging." />
+    <meta property="og:type" content="website" />
+    <title>Wallet Check — Can I afford this?</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/bundle.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#calculator">Skip to calculator</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Wallet Check home">
+          <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M24 8V5L6 8v17h21V10H6"/><path d="M27 15h-8v6h8"/><path d="M22 18h.1"/></svg></span>
+          <span>WALLET<span class="brand-second">CHECK</span></span>
+        </a>
+        <span class="header-note">Your wallet’s honest friend.</span>
+        <span class="live-label"><span></span> READY TO ROAST</span>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="tiny-star" aria-hidden="true">✳</span> WANT IT? COUNT THE WORK.</div>
+            <h1 id="page-title">Can I<br /> afford <span class="this-word">this<svg viewBox="0 0 220 16" aria-hidden="true"><path d="M4 11Q105-3 214 7M18 15Q114 4 204 12"/></svg></span><span class="question">?</span></h1>
+            <p class="hero-description">Enter the price and your pay.<br /> See the work time. Get a funny roast.</p>
+            <p class="how-it-works">1. Pick a goal <span>→</span> 2. Add price + pay <span>→</span> 3. Get a roast</p>
+            <a class="tasks-shortcut" href="#grind-title">Try the daily coding tasks ↓</a>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit-text">LESS SPENDING. MORE LIVING.</div>
+            <svg class="wallet-art" viewBox="0 0 270 205" fill="none">
+              <g transform="rotate(-10 140 100)"><path d="M53 60L182 21l15 50" fill="#d6f85a" stroke="#24291f" stroke-width="3"/><path d="M72 64l102-29 7 21" stroke="#24291f" stroke-width="2"/><path d="M41 68q0-12 13-12h155q15 0 15 15v103q0 15-15 15H54q-13 0-13-13Z" fill="#c5b6ed" stroke="#24291f" stroke-width="3"/><path d="M42 75h165M55 178h154" stroke="#24291f" stroke-width="2" stroke-dasharray="4 5"/><path d="M225 105h-54q-13 0-13 15v14q0 13 13 13h54Z" fill="#f8f6ec" stroke="#24291f" stroke-width="3"/><circle cx="178" cy="126" r="5" fill="#24291f"/><path d="M82 110v8m27-8v8m-29 23q15-13 31 0" stroke="#24291f" stroke-width="4" stroke-linecap="round"/></g>
+              <path d="M231 28v20m-10-10h20M22 112v14m-7-7h14" stroke="#24291f" stroke-width="3"/>
+            </svg>
+            <span class="art-sticker">big dreams.<br /><strong>small wallet.</strong></span>
+          </div>
+        </section>
+
+        <section class="workspace" id="calculator" aria-label="Purchase calculator and result">
+          <div class="calculator-panel">
+            <div class="panel-heading"><span class="step">01</span><h2>What do you want?</h2><span class="small-arrow" aria-hidden="true">↘</span></div>
+            <form id="purchase-form" novalidate>
+              <input type="hidden" name="mode" id="mode" value="shopping" />
+              <div class="mode-switch" role="group" aria-label="What are you working toward?"><button type="button" id="shopping-mode" aria-pressed="true">🛍 Buy something</button><button type="button" id="food-mode" aria-pressed="false">🍽 Plan a meal</button></div>
+              <div class="field">
+                <label for="item" id="item-label">What do you want to buy?</label>
+                <div class="input-wrap"><input id="item" name="item" type="text" value="Headphones" placeholder="For example, headphones" maxlength="80" required aria-describedby="item-error" /><span class="input-icon" aria-hidden="true">↗</span></div>
+                <span class="field-error" id="item-error"></span>
+              </div>
+              <div class="money-fields">
+                <div class="field">
+                  <label for="price">The price</label>
+                  <div class="input-wrap"><input id="price" name="price" type="number" value="2000" min="0.01" max="1000000000000" step="any" inputmode="decimal" required aria-describedby="price-error" /><span class="currency-unit" data-currency-unit>Br</span></div>
+                  <span class="field-error" id="price-error"></span>
+                </div>
+                <div class="field">
+                  <label for="rate" id="rate-label">Your pay per hour</label>
+                  <div class="input-wrap"><input id="rate" name="rate" type="number" value="100" min="0.01" max="1000000000" step="any" inputmode="decimal" required aria-describedby="rate-error" /><span class="currency-unit" data-currency-unit>Br</span></div>
+                  <span class="field-error" id="rate-error"></span>
+                </div>
+              </div>
+              <div class="form-meta"><span id="income-note">Use the same currency for both.</span><label class="currency-picker" for="currency"><span class="sr-only">Currency</span><select id="currency" name="currency"><option value="ETB">ETB · Birr</option><option value="USD">USD · Dollar</option><option value="EUR">EUR · Euro</option><option value="GBP">GBP · Pound</option><option value="KES">KES · Shilling</option><option value="NGN">NGN · Naira</option><option value="INR">INR · Rupee</option></select></label></div>
+              <button class="roast-button" id="calculate" type="submit" disabled><span>Loading the calculator…</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg></button>
+              <p class="form-footnote"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg> Your numbers stay in your browser. The jokes stay friendly.</p>
+            </form>
+            <div class="demo-section"><span class="demo-label">TRY AN EXAMPLE</span><div class="demo-buttons" id="shopping-presets"><button type="button" data-preset="coffee"><span aria-hidden="true">☕</span> A little coffee</button><button type="button" data-preset="shoes"><span aria-hidden="true">👟</span> New sneakers</button><button type="button" data-preset="phone"><span aria-hidden="true">📱</span> The new phone</button></div><div class="demo-buttons" id="food-presets" hidden><button type="button" data-preset="tibs">🥘 Tibs platter</button><button type="button" data-preset="pizza">🍕 Pizza night</button><button type="button" data-preset="burger">🍔 Burger date</button></div></div>
+            <div class="formula-note"><span aria-hidden="true">✳</span><p><strong>How the math works</strong><br /><span id="formula-text">Item price ÷ hourly pay = hours of your life.</span></p></div>
+          </div>
+
+          <div class="result-panel">
+            <div class="result-heading"><span class="step">02</span><h2>Here’s the real cost.</h2><span class="sample-label" id="receipt-label">EXAMPLE RESULT</span></div>
+            <article class="receipt" id="receipt" aria-label="Your purchase result" aria-live="polite" aria-atomic="true">
+              <div class="receipt-top"><div><span class="receipt-brand">WALLET CHECK</span><span class="receipt-caption">PRICE + PAY = YOUR WORK TIME</span></div><svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M17 2v30M2 17h30M6 6l22 22M6 28 28 6"/></svg></div>
+              <div class="receipt-divider"></div>
+              <div class="receipt-item"><span id="result-item">Headphones</span><span id="result-price">2,000 Br</span></div>
+              <div class="receipt-pay"><span id="receipt-income-label">Your pay per hour</span><span id="result-rate">100 Br / hr</span></div>
+              <div class="cost-label" id="cost-label">THIS WILL COST YOU</div>
+              <div class="time-cost"><span id="result-hours">20</span><span class="time-unit" id="time-unit">hours<span>of your life.</span></span></div>
+              <p class="day-cost" id="result-days">That’s 2.5 working days. That is a lot of time.</p>
+              <div class="shift-meter" id="shift-meter" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="shift-caption"><span id="shift-detail">2 full shifts + 4 hours</span><span>8 HOURS / SHIFT</span></div>
+              <div class="receipt-divider lower-divider"></div>
+              <div class="receipt-bottom"><span id="verdict" class="verdict">EXTRA WORK NEEDED</span><span class="barcode" aria-hidden="true"></span></div>
+            </article>
+            <div class="roast-card"><div class="roast-heading"><span><span aria-hidden="true">✳</span> YOUR WALLET SAYS</span><button id="reroll" type="button" aria-label="Give me another roast" title="Another roast">↻</button></div><p id="roast-text" aria-live="polite">“Work for two and a half days. Listen to music about needing a holiday.”</p></div>
+            <div class="decision-buttons"><button class="save-button" id="save-money" type="button"><span aria-hidden="true">↗</span> I’ll save my money</button><div class="buy-arena" id="buy-arena"><button class="buy-button" id="buy-anyway" type="button">Buy it anyway <span aria-hidden="true">↗</span></button></div></div>
+            <div class="result-tools"><span id="decision-hint">Try “Buy it anyway.” The button may run away.</span><button id="copy-result" type="button" aria-label="Copy your result"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="6" y="6" width="9" height="10" rx="1"/><path d="M12 6V2H2v10h4"/></svg> Copy receipt</button></div>
+          </div>
+        </section>
+        <section class="grind-panel" aria-labelledby="grind-title">
+          <div class="grind-top"><div><div class="grind-eyebrow">03 / BUILD SKILLS FOR YOUR GOALS</div><h2 id="grind-title">Small steps.<br /><span>Big goals.</span></h2><p>Keep your goal in mind. Build your coding habits one day at a time.</p></div><div class="grind-mark" aria-hidden="true">&lt;/&gt;<span>COMMIT<br />OR CRY.</span></div></div>
+          <div class="goal-strip"><span aria-hidden="true">🎯</span><span>YOUR CURRENT GOAL</span><strong id="grind-goal">Headphones · 20 hours of work</strong></div>
+          <div class="grind-stats"><div><span class="stat-label">🔥 DAYS IN A ROW</span><strong id="streak-stat">0 days</strong></div><div><span class="stat-label">⚡ TOTAL XP (POINTS)</span><strong id="xp-stat">0 XP</strong></div><div><span class="stat-label">👀 YOUR PROGRESS</span><strong id="judge-stat" class="judge-status">Ready to start</strong></div></div>
+          <div class="grind-main"><div class="quests"><div class="quest-heading"><h3>Today’s coding tasks</h3><span id="quest-count">0 / 3 DONE</span></div><label class="quest"><input type="checkbox" data-quest="commit" /><span class="quest-check" aria-hidden="true"></span><span><strong>Ship one real commit</strong><small>Save one useful code change with Git.</small></span><b>+25 XP</b></label><label class="quest"><input type="checkbox" data-quest="logic" /><span class="quest-check" aria-hidden="true"></span><span><strong>Solve one coding problem</strong><small>Try it yourself before looking at an answer.</small></span><b>+30 XP</b></label><label class="quest"><input type="checkbox" data-quest="sprint" /><span class="quest-check" aria-hidden="true"></span><span><strong>Code for 25 focused minutes</strong><small>One project. Put your phone away.</small></span><b>+20 XP</b></label><div class="xp-meter" role="progressbar" aria-label="Today's coding points" aria-valuemin="0" aria-valuemax="75" aria-valuenow="0" id="xp-meter"><span id="xp-fill"></span></div><p class="quest-disclosure">Tick tasks yourself · saved in this browser · new tasks each day</p></div>
+          <div class="judge-card"><div class="judge-card-heading"><span>YOUR CODING COACH</span><span id="intensity-badge">GENTLE</span></div><p id="grind-roast" aria-live="polite">“You have a goal. Start with one small code change. You can do this.”</p><button type="button" id="judge-day">Roast my progress <span aria-hidden="true">↗</span></button><div id="break-status" class="break-status" role="status">🔒 Finish all 3 tasks to earn a 15-minute game break.</div><button type="button" id="start-break" class="break-button" hidden>🎮 Start my 15-minute break</button></div></div>
+          <details class="vibe-settings"><summary>⚙ Make it yours <span>Choose your roast level</span></summary><div class="vibe-grid"><label for="handle">Your name<input id="handle" type="text" maxlength="24" placeholder="Your name or nickname" autocomplete="nickname" /></label><label for="track">What are you learning?<select id="track"><option>Frontend</option><option>Backend</option><option>AI / Data</option><option>Cybersecurity</option><option>Builder</option></select></label><label for="intensity">Roast level<select id="intensity"><option value="gentle">Gentle · Kind friend</option><option value="spicy">Medium · Honest coach</option><option value="savage">Strong · Tough coach</option></select></label><label for="life-stage">Your daily life<select id="life-stage"><option value="student">Student</option><option value="job">Job Hunter</option><option value="night">Night Owl</option><option value="caregiver">Young Parent / Caregiver</option></select></label></div><p class="empathy-note" id="empathy-note">Gentle mode: kind jokes and small steps. You can do this.</p></details>
+          <div class="grind-bottom"><button type="button" id="life-pass">♡ Busy with life? Take a free rest day.</button><span id="life-pass-note">Family and real responsibilities come first.</span><button class="reset-progress" type="button" id="reset-progress">Reset progress</button></div>
+          <p class="grind-fineprint">XP means practice points, not money. Tasks do not change your pay or meal estimate. Jokes use local templates. No AI key needed.</p>
+        </section>
+        <div class="bottom-note"><span aria-hidden="true">✦</span> Your time matters. Spend it well. <span aria-hidden="true">✦</span></div>
+      </main>
+      <footer><span>WALLET CHECK © <span id="year">2026</span></span><a href="/project-readme.txt" download="Wallet-Check-README.md">Project README ↓</a><span class="footer-status"><span></span> NO SIGN-UP. JUST SMALL STEPS.</span></footer>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="confetti" class="confetti" aria-hidden="true"></div>
+    <noscript><p class="noscript">Turn on JavaScript to calculate your work hours and get roasted.</p></noscript>
+  </body>
+</html>
