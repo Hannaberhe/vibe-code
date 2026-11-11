@@ -8,10 +8,10 @@ See how much work time a purchase costs. Get a short, funny joke about it. Build
 
 ## Team Members
 
-- makbel727@gmail.com
-- merhanberhe@gmail.com
-- yeshiwasadam@gmail.com
-- Abdulaziz Ayalew — abdulazizayalewmussa@gmail.con
+- Makbel Nega - makbel727@gmail.com
+- Merhan Berhe - merhanberhe@gmail.com
+- Yeshiwas Adam - yeshiwasadam@gmail.com
+- Abdulaziz Ayalew - abdulazizayalewmussa@gmail.con
 
 ## Why we built it
 
